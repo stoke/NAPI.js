@@ -13,6 +13,13 @@ build/build.min.js: build/build.js
 clean:
 	rm -f build.js build.min.js
 
-.PHONY: clean
+docs:
+	mkdir -p docs
+	dox-foundation -t NAPI.js -T docs -s lib
+
+docs-md:
+	markdox lib/main.js -o docs.md
+
+.PHONY: clean docs docs-md
 
 # vim: tabstop=4:softtabstop=4:shiftwidth=4:noexpandtab
