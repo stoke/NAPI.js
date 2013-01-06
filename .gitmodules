@@ -1,0 +1,3 @@
+[submodule "deps/ee2"]
+	path = deps/ee2
+	url = git://github.com/hij1nx/EventEmitter2.git
